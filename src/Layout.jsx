@@ -1,4 +1,4 @@
-import Navbar from "./sharecomponent/Navbar";
+import Navbar from "./sharecomponent/navbar/Navbar";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {

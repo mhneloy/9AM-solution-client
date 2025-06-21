@@ -5,32 +5,40 @@ const Navbar = () => {
     <>
       <li>
         <NavLink
-          className={`nav-text text-[18px] ${(isActive) =>
-            isActive ? "text-brand" : "text-brand"}`}
+          to={"/"}
+          className={({ isActive }) =>
+            `nav-text text-[18px] ${isActive ? "text-brand" : "text-white"}`
+          }
         >
           Home
         </NavLink>
       </li>
       <li>
         <NavLink
-          className={`nav-text text-[18px] ${(isActive) =>
-            isActive ? "text-brand" : "text-brand"}`}
+          to="/protfolio"
+          className={({ isActive }) =>
+            `nav-text text-[18px] ${isActive ? "text-brand" : "text-white"}`
+          }
         >
           Protfolio
         </NavLink>
       </li>
       <li>
         <NavLink
-          className={`nav-text text-[18px] ${(isActive) =>
-            isActive ? "text-brand" : "text-brand"}`}
+          to="/service"
+          className={({ isActive }) =>
+            `nav-text text-[18px] ${isActive ? "text-brand" : "text-white"}`
+          }
         >
           Service
         </NavLink>
       </li>
       <li>
         <NavLink
-          className={`nav-text text-[18px] ${(isActive) =>
-            isActive ? "text-brand" : "text-brand"}`}
+          to="/contact"
+          className={({ isActive }) =>
+            `nav-text text-[18px] ${isActive ? "text-brand" : "text-white"}`
+          }
         >
           Contact
         </NavLink>
@@ -66,7 +74,7 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow font-rubik"
               >
                 {list}
               </ul>
@@ -76,13 +84,17 @@ const Navbar = () => {
             </NavLink>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 text-white">{list}</ul>
+            <ul className="menu menu-horizontal px-1 text-white font-rubik">
+              {list}
+            </ul>
           </div>
           <div className="navbar-end">
             {/* <Link to="/signIn" className="btn">
               Sign IN
             </Link> */}
-            <Link className="btn">Book a Metting</Link>
+            <Link className="btn bg-transparent text-brand hover:bg-brand hover:text-white">
+              Book a Metting
+            </Link>
           </div>
         </div>
       </div>

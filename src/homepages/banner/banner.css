@@ -1,0 +1,11 @@
+.group:hover .banner-icon-animation {
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    rotate: 0;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}

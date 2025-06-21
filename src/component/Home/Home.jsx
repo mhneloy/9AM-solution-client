@@ -1,7 +1,9 @@
+import Banner from "../../homepages/banner/Banner";
+
 const Home = () => {
   return (
     <div className="container mx-auto">
-      <h1>I'm in home</h1>
+      <Banner />
     </div>
   );
 };

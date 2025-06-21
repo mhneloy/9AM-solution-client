@@ -54,7 +54,7 @@ const Navbar = () => {
               <div
                 tabIndex={0}
                 role="button"
-                className="btn btn-ghost lg:hidden"
+                className="btn btn-ghost lg:hidden text-brand"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow font-rubik"
+                className="menu menu-sm dropdown-content bg-[#260606] rounded-box z-1 mt-3 w-52 p-2 shadow font-rubik"
               >
                 {list}
               </ul>
@@ -92,7 +92,7 @@ const Navbar = () => {
             {/* <Link to="/signIn" className="btn">
               Sign IN
             </Link> */}
-            <Link className="btn bg-transparent text-brand hover:bg-brand hover:text-white">
+            <Link className="btn bg-transparent text-brand hover:bg-brand hover:text-white border-brand">
               Book a Metting
             </Link>
           </div>

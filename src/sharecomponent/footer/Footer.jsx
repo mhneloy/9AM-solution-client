@@ -3,7 +3,7 @@ import pervej from "../../assets/Logo.png";
 const Footer = () => {
   return (
     <div className="bg-[#260606]">
-      <footer className="footer sm:footer-horizontal bg-transparent text-white p-10">
+      <footer className="container mx-auto footer sm:footer-horizontal bg-transparent text-white py-10">
         <aside>
           <div>
             <img src={pervej} alt="Pervej" className="h-[60px]" />

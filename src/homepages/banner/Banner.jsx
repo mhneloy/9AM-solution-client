@@ -1,7 +1,16 @@
-import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaClock,
+  FaFacebookF,
+  FaGithub,
+  FaHeart,
+  FaLinkedinIn,
+  FaUser,
+} from "react-icons/fa";
+import { MdDone } from "react-icons/md";
 import { Link } from "react-router-dom";
 import "./banner.css";
 import { Typewriter } from "react-simple-typewriter";
+import CountUp from "react-countup";
 const Banner = () => {
   return (
     <div>
@@ -72,6 +81,37 @@ const Banner = () => {
               Download CV
             </button>
           </div>
+        </div>
+      </div>
+      {/* counter up */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-3 justify-center">
+        <div className="flex flex-col justify-center items-center gap-2">
+          <div className="btn w-20 h-20 btn-circle bg-brand text-white   hover:bg-transparent hover:text-brand border border-brand p-2">
+            <MdDone className=" text-4xl" />
+          </div>
+          <CountUp end={100} className="text-2xl font-bold" />
+          <p className="text-2xl font-semibold text-brand">Project Complete</p>
+        </div>
+        <div className="flex flex-col justify-center items-center gap-2">
+          <div className="btn w-20 h-20 btn-circle bg-brand text-white   hover:bg-transparent hover:text-brand border border-brand p-2">
+            <FaUser className=" text-4xl" />
+          </div>
+          <CountUp end={100} className="text-2xl font-bold" />
+          <p className="text-2xl font-semibold text-brand">Clinets</p>
+        </div>
+        <div className="flex flex-col justify-center items-center gap-2">
+          <div className="btn w-20 h-20 btn-circle bg-brand text-white   hover:bg-transparent hover:text-brand border border-brand p-2">
+            <FaHeart className=" text-4xl" />
+          </div>
+          <CountUp end={100} className="text-2xl font-bold" />
+          <p className="text-2xl font-semibold text-brand">Happy Clients</p>
+        </div>
+        <div className="flex flex-col justify-center items-center gap-2">
+          <div className="btn w-20 h-20 btn-circle bg-brand text-white   hover:bg-transparent hover:text-brand border border-brand p-2">
+            <FaClock className=" text-4xl" />
+          </div>
+          <CountUp end={100} className="text-2xl font-bold" />
+          <p className="text-2xl font-semibold text-brand">On Going Projects</p>
         </div>
       </div>
     </div>

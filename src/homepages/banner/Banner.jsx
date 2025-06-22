@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import "./banner.css";
 import { Typewriter } from "react-simple-typewriter";
 import CountUp from "react-countup";
+import fiver from "../../assets/fiver.png";
 const Banner = () => {
   return (
     <div>
@@ -112,6 +113,24 @@ const Banner = () => {
           </div>
           <CountUp end={100} className="text-2xl font-bold" />
           <p className="text-2xl font-semibold text-brand">On Going Projects</p>
+        </div>
+      </div>
+      {/* company logos */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 my-4 justify-center gap-4 ">
+        <div>
+          <img src={fiver} className="w-60 " alt="fiver" />
+        </div>
+        <div>
+          <img src={fiver} className="w-60" alt="fiver" />
+        </div>
+        <div>
+          <img src={fiver} className="w-60" alt="fiver" />
+        </div>
+        <div>
+          <img src={fiver} className="w-60" alt="fiver" />
+        </div>
+        <div>
+          <img src={fiver} className="w-60" alt="fiver" />
         </div>
       </div>
     </div>

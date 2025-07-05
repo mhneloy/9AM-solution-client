@@ -4,8 +4,34 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { IoMdCheckmark } from "react-icons/io";
+import { useEffect, useRef, useState } from "react";
 
 const Workflow = () => {
+  const [scrollPercent, setScrollPercent] = useState(0);
+  const timelineRef = useRef();
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!timelineRef.current) return;
+      const react = timelineRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      const start = Math.max(0, windowHeight - react.top);
+      const total = react.height + windowHeight;
+
+      const percent = Math.min(100, Math.max(0, (start / total) * 100));
+      setScrollPercent(percent);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div className="my-10">
       <h2 className="text-6xl text-brand text-center font-bold font-rubik">
@@ -15,8 +41,12 @@ const Workflow = () => {
         A Step-by-Step Process to Transform Ideas into Success
       </p>
       {/* vertical timeline annimation */}
-      <div>
-        <VerticalTimeline lineColor="red" animate="true">
+      <div className="relative overflow-hidden" ref={timelineRef}>
+        <div
+          className="absolute top-0 left-[calc(50%-2px)] w-1 bg-red-600 z-0"
+          style={{ height: `${scrollPercent}%` }}
+        ></div>
+        <VerticalTimeline lineColor="transparent" animate="true">
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}

@@ -15,9 +15,11 @@ const About = () => {
 
         {/* About Text */}
         <div className="text-center md:text-left space-y-4">
-          <h2 className="text-6xl font-bold text-brand">About Me</h2>
-          <h3 className="text-xl font-semibold text-[#260606]">SEO Expert</h3>
-          <p className="text-base text-secondaryTxt max-w-xl">
+          <h2 className="text-6xl font-bold text-brand font-rubik">About Me</h2>
+          <h3 className="text-xl font-semibold text-[#260606] font-rubik">
+            SEO Expert
+          </h3>
+          <p className="text-base text-secondaryTxt max-w-xl font-rubik">
             I'm a results-driven SEO specialist with a passion for helping
             businesses grow online. I focus on technical SEO, on-page
             optimization, and data-driven strategies to increase visibility and

@@ -12,16 +12,14 @@ import "./banner.css";
 import { Typewriter } from "react-simple-typewriter";
 import CountUp from "react-countup";
 import fiver from "../../assets/fiver.png";
+import perves from "../../assets/perves.png";
 const Banner = () => {
   return (
     <div>
       <div className="hero bg-base-200">
         <div className="flex flex-col justify-between items-center lg:flex-row-reverse py-4 ">
           <div className="w-full px-4 lg:px-0 lg:w-2/5 flex justify-end">
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-              className="w-full lg:max-w-sm rounded-lg shadow-2xl"
-            />
+            <img src={perves} className="w-full lg:max-w-sm rounded-lg " />
           </div>
           <div className="w-full px-4 lg:px-0 lg:w-3/5">
             <h1 className="text-6xl font-bold">

@@ -57,9 +57,7 @@ const SignUp = () => {
 
           {/* Password */}
           <div>
-            <label className="label">
-              <span className="label-text">Password</span>
-            </label>
+            <label className="label">Password</label>
             <input
               type="password"
               placeholder="Enter your password"

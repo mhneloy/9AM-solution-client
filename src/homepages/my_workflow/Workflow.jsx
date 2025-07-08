@@ -43,7 +43,7 @@ const Workflow = () => {
       {/* vertical timeline annimation */}
       <div className="relative overflow-hidden" ref={timelineRef}>
         <div
-          className="absolute top-0 left-[calc(50%-2px)] w-1 bg-red-600 z-0"
+          className="absolute top-0 left-[calc(50%-2px)] w-1 bg-brand z-0"
           style={{ height: `${scrollPercent}%` }}
         ></div>
         <VerticalTimeline lineColor="transparent" animate="true">

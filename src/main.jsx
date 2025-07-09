@@ -9,9 +9,7 @@ import AuthProvider from "./sharecomponent/authContext/AuthProvider.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
-      <RouterProvider router={router}>
-        <Layout />
-      </RouterProvider>
+      <RouterProvider router={router} />
     </AuthProvider>
   </StrictMode>
 );

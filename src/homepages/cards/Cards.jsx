@@ -11,7 +11,7 @@ const Cards = () => {
         bg-white
         hover:bg-gradient-to-br from-[#EF700E] to-orange-400
         text-brand
-        inset-shadow-card
+        shadow-card
         transition
         duration-300
         ease-in-out
@@ -43,7 +43,7 @@ const Cards = () => {
         bg-white
         hover:bg-gradient-to-br from-[#EF700E] to-orange-400
         text-brand
-        inset-shadow-card
+        shadow-card
         transition
         duration-300
         ease-in-out
@@ -75,7 +75,7 @@ const Cards = () => {
         bg-white
         hover:bg-gradient-to-br from-[#EF700E] to-orange-400
         text-brand
-        inset-shadow-card
+        shadow-card
         transition
         duration-300
         ease-in-out

@@ -5,7 +5,7 @@ const About = () => {
     <section className="bg-base-100 py-10 px-4 md:px-10">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
         {/* Profile Image */}
-        <div className="w-96 h-96 flex justify-center items-center bg-brand rounded-full overflow-hidden shadow-lg border-4 border-[#260606]">
+        <div className="w-96 h-96 hidden lg:flex justify-center items-center bg-brand rounded-full overflow-hidden shadow-lg border-4 border-[#260606]">
           <img
             src={perves_pic} // replace with your image path
             alt="Md Mahmudul Hassan Neloy"

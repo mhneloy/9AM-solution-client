@@ -49,7 +49,7 @@ const Workflow = () => {
         <VerticalTimeline lineColor="transparent" animate="true">
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+            contentStyle={{ background: "rgb(33, 150, 243)", color: "#000000" }}
             contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
             date="2011 - present"
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
@@ -67,6 +67,7 @@ const Workflow = () => {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="2010 - 2011"
+            contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
             icon={<IoMdCheckmark />}
           >

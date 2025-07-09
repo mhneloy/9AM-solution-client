@@ -4,6 +4,6 @@
 @theme {
   --color-brand: #ef700e;
   --color-secondaryTxt: #1f1f1f !important;
-  --inset-shadow-card: inset 0 200px 3px rgba(239, 112, 14, 0.25);
+  --shadow-card: inset 0 200px 3px rgba(239, 112, 14, 0.25);
   --font-rubik: "Rubik", sans-serif;
 }

@@ -1,7 +1,10 @@
 const Accordion = () => {
   return (
-    <div className="shadow-brand">
-      <div className="collapse collapse-arrow bg-base-100 border border-base-300">
+    <div className=" py-4">
+      <h3 className="text-center text-5xl text-brand font-bold my-8">
+        Frequently Ask Ques
+      </h3>
+      <div className="collapse collapse-arrow bg-base-100 shadow-card border border-base-300">
         <input type="radio" name="my-accordion-2" defaultChecked />
         <div className="collapse-title font-semibold">
           How do I create an account?
@@ -11,7 +14,7 @@ const Accordion = () => {
           registration process.
         </div>
       </div>
-      <div className="collapse collapse-arrow bg-base-100 border border-base-300">
+      <div className="collapse collapse-arrow bg-base-100 shadow-card border border-base-300">
         <input type="radio" name="my-accordion-2" />
         <div className="collapse-title font-semibold">
           I forgot my password. What should I do?
@@ -21,7 +24,7 @@ const Accordion = () => {
           instructions sent to your email.
         </div>
       </div>
-      <div className="collapse collapse-arrow bg-base-100 border border-base-300">
+      <div className="collapse collapse-arrow bg-base-100 shadow-card border border-base-300">
         <input type="radio" name="my-accordion-2" />
         <div className="collapse-title font-semibold">
           How do I update my profile information?

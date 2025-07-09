@@ -2,7 +2,7 @@ import { FaRegSmile } from "react-icons/fa";
 
 const Cards = () => {
   return (
-    <div className="flex justify-center items-center gap-4">
+    <div className="flex flex-col md:flex-row  justify-center items-center gap-4">
       <div
         className="
         max-w-sm

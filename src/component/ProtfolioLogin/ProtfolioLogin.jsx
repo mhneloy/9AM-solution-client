@@ -2,24 +2,58 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
+import useCustomContext from "../../sharecomponent/useCustomContext";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const ProtfolioLogin = () => {
+  const { loginUser, googleLogin } = useCustomContext();
+  const navigate = useNavigate();
+  const successNofity = () => {
+    toast.success("Successfully Login!", {
+      position: "top-center",
+    });
+  };
+  const errorNofity = (error = "password or email is not valid") => {
+    toast.error(error, {
+      position: "top-left",
+    });
+  };
+
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
   const [showPassword, setShowPassword] = useState(false);
 
   const onSubmit = (data) => {
-    console.log("Login Data:", data);
-    // Handle login logic here
+    const { email, password } = data;
+    loginUser(email, password)
+      .then((result) => {
+        if (result.user) {
+          successNofity();
+          reset();
+          navigate("/");
+        }
+      })
+      .catch((err) => errorNofity(err.message));
   };
 
   const handleGoogleLogin = () => {
-    console.log("Google login triggered");
-    // Trigger Google sign-in logic
+    googleLogin()
+      .then((result) => {
+        console.log(result.user);
+        if (result.user) {
+          successNofity();
+          navigate("/");
+        }
+      })
+      .catch((err) => {
+        errorNofity(err.message);
+      });
   };
 
   return (

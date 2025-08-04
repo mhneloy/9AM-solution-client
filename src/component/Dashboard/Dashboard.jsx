@@ -1,8 +1,11 @@
 import { Outlet } from "react-router-dom";
 import SideNav from "./sideNav/SideNav";
 import Footer from "../../sharecomponent/footer/Footer";
+import useCustomContext from "../../sharecomponent/useCustomContext";
 
 const Dashboard = () => {
+  const { user, loading } = useCustomContext();
+  console.log(user);
   return (
     <div>
       <div className="relative min-h-[calc(100vh-273px)] md:flex bg-white">

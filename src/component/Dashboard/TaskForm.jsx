@@ -37,7 +37,7 @@ const TaskForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-white to-orange-100 p-6">
+    <div className="h-full flex items-center justify-center bg-gradient-to-br from-blue-100 via-white to-orange-100 p-6">
       <div className="w-full max-w-xl bg-white shadow-2xl rounded-3xl p-8">
         <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">
           📋 Add New Entry
@@ -50,7 +50,7 @@ const TaskForm = () => {
             <input
               type="text"
               placeholder="Enter name"
-              className="input input-bordered input-primary w-full"
+              className="input input-bordered input-primary w-full focus:outline-none"
               {...register("name", { required: "Name is required" })}
             />
             {errors.name && (
@@ -66,7 +66,7 @@ const TaskForm = () => {
             <input
               type="file"
               accept="image/*"
-              className="file-input file-input-bordered file-input-primary w-full"
+              className="file-input file-input-bordered file-input-primary w-full focus:outline-none"
               {...register("photo", { required: "Photo is required" })}
               onChange={handlePhotoChange}
             />
@@ -90,9 +90,11 @@ const TaskForm = () => {
 
           {/* Status Select */}
           <div className="form-control">
-            <label className="label font-semibold text-gray-700">Status</label>
+            <label className="label font-semibold text-gray-700 block">
+              Status
+            </label>
             <select
-              className="select select-bordered select-primary"
+              className="select select-bordered select-primary w-full focus:outline-none"
               defaultValue=""
               {...register("status", { required: "Status is required" })}
             >

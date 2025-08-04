@@ -5,7 +5,7 @@ import Footer from "../../sharecomponent/footer/Footer";
 const Dashboard = () => {
   return (
     <div>
-      <div className="min-h-[calc(100vh-273px)] md:flex bg-white">
+      <div className="relative min-h-[calc(100vh-273px)] md:flex bg-white">
         <SideNav />
         <div className="w-full md:flex-1 min-h-[clac(100vh-360px)]">
           <Outlet />

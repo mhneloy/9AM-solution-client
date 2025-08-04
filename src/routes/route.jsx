@@ -29,7 +29,7 @@ export const router = createBrowserRouter([
     element: <Dashboard />,
     children: [
       {
-        path: "taskform",
+        path: "",
         element: <TaskForm />,
       },
     ],

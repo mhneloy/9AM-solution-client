@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaPaperPlane } from "react-icons/fa";
 import { MdPhotoCamera } from "react-icons/md";
@@ -105,6 +105,18 @@ const TaskForm = () => {
                 />
               </div>
             )}
+          </div>
+          {/* descriptions */}
+          <div className="form-control">
+            <label className="label font-semibold text-gray-700">
+              Description
+            </label>
+            <textarea
+              placeholder="Enter a short description..."
+              className="textarea textarea-bordered textarea-primary w-full focus:outline-none"
+              rows={4}
+              {...register("description")}
+            ></textarea>
           </div>
 
           {/* Status Select */}

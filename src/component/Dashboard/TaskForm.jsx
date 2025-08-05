@@ -2,8 +2,23 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaPaperPlane } from "react-icons/fa";
 import { MdPhotoCamera } from "react-icons/md";
+import ImageUpload from "../../sharecomponent/authContext/ImageUpload";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const TaskForm = () => {
+  const successNofity = () => {
+    toast.success("Successfully Added The Post", {
+      position: "top-center",
+    });
+  };
+
+  const errorNofity = (error) => {
+    toast.error(error, {
+      position: "top-left",
+    });
+  };
+
   const {
     register,
     handleSubmit,
@@ -13,15 +28,19 @@ const TaskForm = () => {
 
   const [preview, setPreview] = useState(null);
 
-  const onSubmit = (data) => {
-    const file = data.photo[0];
-    const formData = new FormData();
-    formData.append("name", data.name);
-    formData.append("status", data.status);
-    formData.append("photo", file);
-
-    // 🧾 Example: send formData to your backend
-    console.log("Form Data:", data);
+  const onSubmit = async (data) => {
+    // const file = data.photo[0];
+    const { photo, ...formData } = data;
+    const imgUrl = await ImageUpload(photo[0]);
+    formData.photo = imgUrl;
+    axios
+      .post(`http://localhost:5050/pushData`, formData)
+      .then((res) => {
+        if (res.data.acknowledged) {
+          successNofity();
+        }
+      })
+      .catch((err) => errorNofity(err));
 
     reset();
     setPreview(null);
